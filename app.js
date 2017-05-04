@@ -7,7 +7,7 @@ function getDataFromAPI(searchTerm){
         key: 'AIzaSyBHIpCEIVOD4TWR_x3XdfGuiB3Dkxxn_58',
         q: searchTerm
     }
-    $.getJSON(YOU_TUBE_URL, query,function(data){
+    $.getJSON(YOU_TUBE_URL, query, function(data){
         var resultElement = '';
 
         if(data){
