@@ -9,10 +9,12 @@ function getDataFromAPI(searchTerm){
     }
     $.getJSON(YOU_TUBE_URL, query, function(data){
         var resultElement = '';
-        
+
         if(data){
             data.items.forEach(function(item){
-                resultElement += '<p>'+ '<a href = "https://www.youtube.com/watch?v=' + item.id.videoId +  '">' + '<img src ="' + item.snippet.thumbnails.medium.url +  '"</img>' +'</a>' +'</p>';
+                resultElement += '<p>'+ '<a href = "https://www.youtube.com/watch?v='
+                + item.id.videoId +  '">' + '<img src ="'
+                + item.snippet.thumbnails.medium.url +  '"</img>' +'</a>' +'</p>';
             });
         }
         else {
